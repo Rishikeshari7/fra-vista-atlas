@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        forest: {
+          DEFAULT: "hsl(var(--forest-primary))",
+          secondary: "hsl(var(--forest-secondary))",
+          light: "hsl(var(--forest-light))",
+        },
+        earth: {
+          DEFAULT: "hsl(var(--earth-primary))",
+          secondary: "hsl(var(--earth-secondary))",
+        },
+        water: {
+          DEFAULT: "hsl(var(--water-primary))",
+        },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        info: "hsl(var(--info))",
       },
       borderRadius: {
         lg: "var(--radius)",
