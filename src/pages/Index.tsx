@@ -4,12 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MapPin, BarChart3, FileText, Users, TreePine, Droplets, Home, Search } from "lucide-react";
+import { MapPin, BarChart3, FileText, Users, TreePine, Droplets, Home, Search, Brain } from "lucide-react";
 import DashboardStats from "@/components/DashboardStats";
 import FRAMap from "@/components/FRAMap";
-import DataTables from "@/components/DataTables";
+import EnhancedDataTables from "@/components/EnhancedDataTables";
 import ProgressCharts from "@/components/ProgressCharts";
 import DecisionSupport from "@/components/DecisionSupport";
+import AIAssistant from "@/components/AIAssistant";
 import heroImage from "@/assets/fra-hero.jpg";
 
 const Index = () => {
@@ -71,7 +72,7 @@ const Index = () => {
 
         {/* Main Tabs */}
         <Tabs defaultValue="overview" className="mt-8">
-          <TabsList className="grid grid-cols-5 w-fit">
+          <TabsList className="grid grid-cols-6 w-fit">
             <TabsTrigger value="overview" className="flex items-center gap-2">
               <BarChart3 className="h-4 w-4" />
               Overview
@@ -92,6 +93,10 @@ const Index = () => {
               <Users className="h-4 w-4" />
               DSS
             </TabsTrigger>
+            <TabsTrigger value="ai" className="flex items-center gap-2">
+              <Brain className="h-4 w-4" />
+              AI Assistant
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="mt-6">
@@ -106,7 +111,7 @@ const Index = () => {
           </TabsContent>
 
           <TabsContent value="data" className="mt-6">
-            <DataTables />
+            <EnhancedDataTables />
           </TabsContent>
 
           <TabsContent value="analytics" className="mt-6">
@@ -118,6 +123,10 @@ const Index = () => {
 
           <TabsContent value="dss" className="mt-6">
             <DecisionSupport />
+          </TabsContent>
+
+          <TabsContent value="ai" className="mt-6">
+            <AIAssistant />
           </TabsContent>
         </Tabs>
       </div>
